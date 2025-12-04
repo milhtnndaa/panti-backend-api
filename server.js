@@ -47,8 +47,8 @@ app.post('/create-invoice', async (req, res) => {
             payer_email: email,
             description: `Donasi dari ${name} untuk Panti Wreda Assalam`,
             invoice_duration: 60,
-            success_redirect_url: `http://127.0.0.1:8080/terima-kasih.html?external_id=${externalId}`,
-            failure_redirect_url: 'http://127.0.0.1:8080/gagal.html',
+            success_redirect_url: `https://milhtnndaa.github.io/panti-wreda-website/terima-kasih.html?external_id=${externalId}`,
+            failure_redirect_url: 'https://milhtnndaa.github.io/panti-wreda-website/gagal.html',
         };
 
         const response = await axios.post(XENDIT_API_URL, invoiceData, {
